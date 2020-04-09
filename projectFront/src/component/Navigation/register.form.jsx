@@ -78,6 +78,28 @@ class SignUp extends Component {
   //   }
   // };
 
+  handletagmethod = data => {
+    console.log(data, this.state.tagsArray);
+    let newArray = this.state.tagsArray.filter(item => item !== data);
+    this.setState({ tagsArray: newArray });
+    console.log(newArray);
+  };
+  // task add in array
+  addinarray = () => {
+    this.setState({ tagsArray: [...this.state.tagsArray, this.state.tags] });
+    this.setState({ tags: "" });
+    console.log(this.state.tagsArray);
+  };
+
+  // on Change
+  onchangemethod = e => {
+    let myRange = document.getElementById("myRange");
+    let myOwnSpan = document.getElementById("myOwnSpan");
+    // console.log(myRange.value, myOwnSpan.style.left);
+    // myOwnSpan.style.left = `${myRange.value - 1}%`;
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   handleChange = e => {
     this.setState({
       stateA: e.target.value
@@ -280,6 +302,42 @@ class SignUp extends Component {
                 value={this.state.tags}
                 onChange={() => this.handleChange(this.state.tags)}
               /> */}
+
+              <input
+                type="text"
+                className="col-lg-8 form-control"
+                name="tags"
+                placeholder="tags"
+                value={this.state.tags}
+                onChange={this.onchangemethod}
+              />
+
+              <button
+                className="float-right"
+                type="button"
+                onClick={this.addinarray}
+              >
+                {" "}
+                Add
+              </button>
+              <section>
+                {this.state.tagsArray.map((data, index) => (
+                  <React.Fragment key={index}>
+                    <button
+                      type="button"
+                      className="btn btn-success btn-sm mr-1"
+                      key={data + index}
+                      onClick={() => {
+                        this.handletagmethod(data);
+                      }}
+                    >
+                      {data}
+                      <i className="fa fa-close"></i>
+                    </button>
+                    {/* <li>{data}</li> */}
+                  </React.Fragment>
+                ))}
+              </section>
 
               {/* <input
                 type="text"
