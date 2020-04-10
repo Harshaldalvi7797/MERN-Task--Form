@@ -79,7 +79,7 @@ function Navigation() {
           {/* <h2>I am looking for...</h2> */}
         </Navbar>
 
-        <div className="sect">
+        <div className="sect" style={{ justifyContent: "center" }}>
           <h2 style={{ marginBottom: "50px" }}>I am looking for...</h2>
           <Form inline>
             <Form.Control

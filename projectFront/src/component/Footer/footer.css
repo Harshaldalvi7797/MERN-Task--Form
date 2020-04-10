@@ -1,0 +1,32 @@
+.footer {
+  /* margin-top: 250px;
+  margin-top: 300px; */
+  /* position: fixed; */
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  color: white;
+  text-align: center;
+}
+@media screen and (min-width: 500px) {
+  .m {
+    margin-left: 20px;
+    padding-left: 25px;
+  }
+}
+.center {
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+}
+/* .example {
+  border: 5px solid #000;
+  align-content: center;
+  align-items: center;
+  width: 500px;
+  align-self: cen;
+  /* height: 200px;
+  width: 400px;
+  position: relative; */

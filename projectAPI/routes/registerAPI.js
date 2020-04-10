@@ -47,4 +47,9 @@ router.post("/register", uploads.single("image"), async (req, res) => {
   console.log(data);
   res.send({ message: "thank you", d: data });
 });
+
+// router.get("/fetch" async (req,res) =>
+// {
+
+// })
 module.exports = router;
