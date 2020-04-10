@@ -9,6 +9,8 @@ import {
 } from "react-bootstrap";
 import "./nav.css";
 import MyVerticallyCenteredModal from "./register";
+import Habout from "../Home/about.home";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -27,21 +29,25 @@ function Navigation() {
           <Navbar.Collapse id="basic-navbar-nav" className="">
             <Nav className="mr-auto menu">
               <Nav.Link
-                href="#home"
-                className="link"
+                as={Link}
+                to={"/home"}
                 style={{ color: "white" }}
+                className="link"
               >
                 HOME
               </Nav.Link>
               <Nav.Link
-                href="#link"
+                as={Link}
+                to={"/about"}
                 style={{ color: "white" }}
                 className="link"
               >
                 ABOUT US
               </Nav.Link>
+
               <Nav.Link
-                href="#link"
+                as={Link}
+                to={"/jobs"}
                 style={{ color: "white" }}
                 className="link"
               >

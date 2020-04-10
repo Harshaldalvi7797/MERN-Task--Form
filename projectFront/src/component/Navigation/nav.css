@@ -78,3 +78,9 @@
     font-size: 150px;
   }
 } */
+
+@media screen and (min-width: 1200px) {
+  .new {
+    margin-left: 500px;
+  }
+}
